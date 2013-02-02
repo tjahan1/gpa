@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @assignment.name %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%= @assignment.weight %>
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @assignment.due_date %>
+</p>
+
+<p>
+  <b>Out of:</b>
+  <%= @assignment.out_of %>
+</p>
+
+<p>
+  <b>Grade:</b>
+  <%= @assignment.grade %>
+</p>
+
+
+<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
+<%= link_to 'Back', assignments_path %>

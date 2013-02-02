@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @course.name %>
+</p>
+
+<p>
+	<b><%= pluralize(@course.assignments.size, 'Assignment') %></b><br />
+	<ul>
+		<% for assignment in @course.assignments %>
+		<li><%= link_to((assignment.name), assignment_path(assignment)) %></li>
+		<% end  %>
+	</ul>
+</p>
+
+	<%= Assignment.average('grade') %>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
